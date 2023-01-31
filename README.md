@@ -17,9 +17,3 @@ Wird der Bestätigungslink dann angeclickt, kommt zur Bestätigung die Seite ind
 In der Sidebox Information kann ein Link zur Newsletteranmeldung aktiviert werden.
 
 Eine Newsletterabmeldung erfolgt rein über die in den Sendinblue Mails enthaltenen Abmeldelinks, die gesamte Zen Cart interne Newsletterfunktionalität wird durch Sendinblue ersetzt.
-
-Donationware:
-
-Der Aufwand für Entwicklung, Test und Dokumentation dieses Moduls war beträchtlich.
-Wenn Sie dieses Modul verwenden, spenden Sie bitte:
-* https://spenden.zen-cart-pro.at
