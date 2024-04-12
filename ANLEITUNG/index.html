@@ -1,18 +1,18 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Sendinblue Newsletter Integration 1.0.0 für Zen Cart 1.5.7 deutsch</title>
+<title>Brevo (Sendinblue) Newsletter Integration 1.0.0 für Zen Cart 1.5.7 deutsch</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="content-language" content="de">
-<meta name="description" content="Integration des Sendinblue Newsletter Systems in die deutsche Zen Cart Version">
+<meta name="description" content="Integration des Brevo Newsletter Systems in die deutsche Zen Cart Version">
 <link rel="stylesheet" type="text/css" href="includes/css/stylesheet.css">  
 <script type="text/javascript" src="includes/jscript/jscript_tabs.js"></script>
 </head>
 <body>
 <div id="wrapper">
 <div id="header">
-<h1>Sendinblue Newsletter Integration 1.0.0 für Zen Cart 1.5.7 deutsch</h1>
+<h1>Brevo (Sendinblue) Newsletter Integration 1.1.0 für Zen Cart 1.5.7 deutsch</h1>
 </div>
 
 <div id="slidetabsmenu" style="display: none;">
@@ -37,7 +37,7 @@
 
 <h2>Sinn und Zweck dieses Moduls</h2>
 
-  <p>Mit diesem Modul wird das Newslettersystem von Sendinblue (<a href="https://de.sendinblue.com/" target="_blank">https://de.sendinblue.com/</a>) DSGVO-konform im Shop integriert. <br>
+  <p>Mit diesem Modul wird das Newslettersystem von Brevo (ehemals) Sendinblue (<a href="https://www.brevo.com/de/" target="_blank">https://www.brevo.com/de/</a>) DSGVO-konform im Shop integriert. <br>
     Kunden, die bei der Neuregistrierung im Shop die Checkbox Newsletter abonnieren ankreuzen, bekommen von Sendinblue das Double-Optin Bestätigungsmail und werden nach Anclicken des Bestätigungslinks in Ihre Sendinblue Liste eingetragen.<br>
     Übermittelt werden Emailadresse, Vorname und Nachname.</p>
   <p>Damit auch Shopbesucher die Möglichkeit haben, den Newsletter zu abonnieren werden drei neue Define Pages mitgeliefert. Auf der Seite index.php?main_page=newsletter kann dan via Tools &gt; Seiteneditor der Formularcode aus der Sendinblue-Administration eingefügt werden.<br>
@@ -50,10 +50,10 @@
     Wenn Sie dieses Modul verwenden, spenden Sie bitte:</p>
 <p><a href="https://donorbox.org/spende-fur-die-weiterentwicklung-der-deutschen-zen-cart-version" target="_blank"><img src="https://www.zen-cart-pro.at/zencartpro-donation-white.png" alt="Spende für die Weiterentwicklung der deutschen Zen Cart Version" title="Spende für die Weiterentwicklung der deutschen Zen Cart Version"></a></p>
 <h3>Copyright,  Lizenz</h3>
-<p> (c) 2023 webchills (<a href="https://www.webchills.at" target="_blank">www.webchills.at</a>)<br>
+<p> (c) 2023-2024 webchills (<a href="https://www.webchills.at" target="_blank">www.webchills.at</a>)<br>
 <br>
  Portions Copyright (c) 2003 osCommerce<br>
-  Portions Copyright     (c) 2003-2023 Zen Cart</p>
+  Portions Copyright     (c) 2003-2024 Zen Cart</p>
 <p>This contribution is subject to version 3.0 of the GPL license available through the world-wide-web at the following url:<br>
   <a href="http://www.zen-cart-pro.at/license/3_0.txt">http://www.zen-cart-pro.at/license/3_0.txt</a><br>
   <br>
@@ -71,11 +71,13 @@
 <h2>Installation</h2>
 <h3>Voraussetzungen</h3>
   <br>
-  <p>Dieses Modul ist<strong> nur für Zen Cart 1.5.7 deutsch geeignet</strong>.<br>
+  <p>Dieses Modul ist<strong> nur für Zen Cart 1.5.7h deutsch geeignet</strong>.<br>
+    Stellen Sie sicher, dass Sie Ihren Shop auf 1.5.7h aktualisiert haben, bevor Sie dieses Modul installieren.
     <br>
-    <strong>Es wird ein fertig konfigurierter aktiver Account bei <a href="https://de.sendinblue.com/" target="_blank">Sendinblue</a> benötigt.</strong><br>
     <br>
-    Das Modul verwendet CURL zur Kommunikation mit der Sendinblue API, daher muss <strong>in Ihrer PHP Konfiguration CURL verfügbar und aktiviert</strong> sein. <br>
+    <strong>Es wird ein fertig konfigurierter aktiver Account bei <a href="https://www.brevo.com/de/" target="_blank">Brevo</a> benötigt.</strong><br>
+    <br>
+    Das Modul verwendet CURL zur Kommunikation mit der Brevo API, daher muss <strong>in Ihrer PHP Konfiguration CURL verfügbar und aktiviert</strong> sein. <br>
     <br>
     <br>
     <strong>WICHTIG:</strong><br>    
@@ -104,10 +106,10 @@ BACKUP gemacht? Ok, dann weiterlesen...
 <p>Die Installation erfolgt in folgenden Schritten. Halten Sie diesen Ablauf ein!<br>
   <br>
   <strong>1)</strong><br>
-  <strong>Vorbereitungen in Sendinblue</strong> <br>
+  <strong>Vorbereitungen in Brevo</strong> <br>
   <br>
   <strong>ID der Liste </strong><br>
-  Falls noch nicht geschehen, legen Sie in Ihrer Sendinblue Administration unter Kontakte &gt; Listen eine Liste an, in die die Shopkunden später eingetragen werden sollen. Notieren Sie sich die ID dieser Liste.<br>
+  Falls noch nicht geschehen, legen Sie in Ihrer Brevo Administration unter Kontakte &gt; Listen eine Liste an, in die die Shopkunden später eingetragen werden sollen. Notieren Sie sich die ID dieser Liste.<br>
   <br>
   <strong>Registrierungsformular </strong><br>
   Legen Sie unter Kontakte &gt; Formulare ein neues Registrierungsformular an, das dann später im Shop eingebunden wird.<br>
@@ -134,7 +136,7 @@ Kopieren Sie den gesamten angezeigten Code heraus und speichern Sie ihn in einer
 Notieren Sie sich unter Kampagnen &gt; Templates die ID des Templates Standard-Vorlage für Double-Opt-in-Bestätigungen oder falls Sie im Formular ein anderes Template gewählt haben, die ID dieses Templates<br>
 <br>
 <strong>API-Key </strong><br>
-Clicken Sie oben rechts in der Sendinblue Administration auf Ihren Benutzernamen und wählen Sie SMTP &amp; API<br>
+Clicken Sie oben rechts in der Brevo Administration auf Ihren Benutzernamen und wählen Sie SMTP &amp; API<br>
 Im Reiter API-Schlüssel generieren Sie einen neuen API Schlüssel und nennen ihn z.B. zencart<br>
 Notieren Sie sich Ihren API-Schlüssel<br>
 <br>
@@ -154,13 +156,13 @@ Dann nun alle Dateien/Ordner aus dem Ordner NEUE DATEIEN in der vorgegebenen Str
   Dabei werden keine bestehende Dateien überschrieben.<br>
   <br>
   5)<br>
-  In der Zen Cart Administration auf irgendeinen Menüpunkt clicken. Sie sollten oben grüne Erfolgsmeldungen sehen und unter Konfiguration ist nun der neue Menüpunkt &quot;Sendinblue&quot; vorhanden.  </p>
+  In der Zen Cart Administration auf irgendeinen Menüpunkt clicken. Sie sollten oben grüne Erfolgsmeldungen sehen und unter Konfiguration ist nun der neue Menüpunkt &quot;Brevo&quot; vorhanden.  </p>
 <p>6)<br>
 Im Ordner GEAENDERTE DATEIEN befinden sich Beispieldateien für die  Dateien, die von diesem Modul geändert werden.<br>
 Falls Sie das responsive Standardtemplate responsive_classic aktiv haben, verwenden Sie  die Dateien im Ordner DEINTEMPLATE_RESPONSIVE.<br>
 Für alle anderen Templates, verwenden Sie die Dateien im Ordner DEINTEMPLATE <br>
-Wenn Sie Zen Cart 1.5.7 gerade frisch installiert haben und noch keinerlei Änderungen an den Dateien vorgenommen haben, können Sie nun  die Dateien aus dem Ordner GEAENDERTE DATEIEN in der vorgegebenen Struktur in die Zen Cart Installation hochladen und die bestehenden überschreiben.<br>
-Wenn Sie Zen Cart 1.5.7 schon länger im Einsatz haben und schon einmal Änderungen an Dateien vorgenommen oder andere Module eingebaut haben,   dann laden Sie die Dateien keinesfalls einfach hoch. <br>
+Wenn Sie Zen Cart 1.5.7h gerade frisch installiert haben und noch keinerlei Änderungen an den Dateien vorgenommen haben, können Sie nun  die Dateien aus dem Ordner GEAENDERTE DATEIEN in der vorgegebenen Struktur in die Zen Cart Installation hochladen und die bestehenden überschreiben.<br>
+Wenn Sie Zen Cart 1.5.7h schon länger im Einsatz haben und schon einmal Änderungen an Dateien vorgenommen oder andere Module eingebaut haben,   dann laden Sie die Dateien keinesfalls einfach hoch. <br>
 Vergleichen Sie sie stattdessen mit der   entsprechenden Datei in Ihrem Shop und nehmen Sie die Änderungen   manuell per WinMerge oder BeyondCompare vor.<br>
  Dann spielen Sie die geänderten Dateien ein.<br>
  <br>
@@ -171,7 +173,7 @@ Vergleichen Sie sie stattdessen mit der   entsprechenden Datei in Ihrem Shop und
  Stellen Sie diesen Wert auf <strong>false</strong><br>
   <br>
   8)<br> 
-  Integrieren Sie nun das Sendinblue Anmeldeformular.<br>
+  Integrieren Sie nun das Brevo Anmeldeformular.<br>
   Unter Tools &gt; Seiteneditor schalten Sie rechts den internen HTML Editor um auf &quot;Normaler Text&quot;<br>
   Wählen Sie dann die Seite define_newsletter.php<br>
   Kopieren Sie den kompletten HTML Code aus Ihrer zuvor gespeicherten Textdatei ins Eingabeld und speichern Sie.<br>
@@ -179,11 +181,11 @@ Vergleichen Sie sie stattdessen mit der   entsprechenden Datei in Ihrem Shop und
   <br>
   <br>
   9) OPTIONAL<br>
-  Falls Sie das Modul Bestellen ohne Kundenkonto - COWOA im Shop integriert haben und die Newsletteranmeldung und Sendinblue Koppelung auch im COWOA Checkout integrieren wollen, finden Sie im Ordner OPTIONAL COWOA Vorlagen für die beiden Dateien, die Sie dafür in Ihrer COWOA Installation ändern müssen.
+  Falls Sie das Modul Bestellen ohne Kundenkonto - COWOA im Shop integriert haben und die Newsletteranmeldung und Brevo Koppelung auch im COWOA Checkout integrieren wollen, finden Sie im Ordner OPTIONAL COWOA Vorlagen für die beiden Dateien, die Sie dafür in Ihrer COWOA Installation ändern müssen.
   <br>
   <br>
   10)<br>
-  Nehmen Sie nun unter Konfiguration &gt; Sendinblue die restlichen Einstellungen vor:</p>
+  Nehmen Sie nun unter Konfiguration &gt; Brevo die restlichen Einstellungen vor:</p>
   </div>
 </div>
 </div>
@@ -198,9 +200,9 @@ Vergleichen Sie sie stattdessen mit der   entsprechenden Datei in Ihrem Shop und
 <h2>KONFIGURATION</h2>
 <p><b><br>
   Einstellungsmöglichkeiten in der Zen Cart Administration</b></p>
-<p> Unter Konfiguration &gt; Sendinblue nun wie folgt vorgehen:<br>
+<p> Unter Konfiguration &gt; Brevo nun wie folgt vorgehen:<br>
   <strong><br>
-    Sendinblue - Newsletter Define Pages</strong><br>
+    Brevo - Newsletter Define Pages</strong><br>
   true oder false<br>
   Ist nach der Installation auf false gestellt.<br>
   Stellen Sie auf true um ihre Newsletteranmeldeseite zu aktivieren. Den Formularcode haben Sie ja bereits eingefügt.<br>
@@ -215,50 +217,50 @@ Vergleichen Sie sie stattdessen mit der   entsprechenden Datei in Ihrem Shop und
   index.php?main_page=newsletter_success<br>
   Den Infotext auf dieser Seite können Sie unter Tools &gt; Seiteneditor &gt; define_newsletter_success anpassen  <br>
   <br>
-  <strong>Sendinblue - Newsletter Link in der Sidebox</strong><br>
+  <strong>Brevo - Newsletter Link in der Sidebox</strong><br>
   Stellen Sie auf true, um in Ihrer Information Sidebox einen Link zu Ihrer Newsletteranmeldeseite zu aktivieren.<br>
   Falls Sie die Sidebox Information aktiv haben, prüfen Sie ob dort nun ein Link zur Newsletteranmeldeseite angezeigt wird.<br>
   <br>
   Damit haben Sie nun die normale Newsletteranmeldung für Shopbesucher fertig konfiguriert.<br>
   <br>
   Nun muss noch die Übermittlung der Daten im Hintergrund bei Registrierungen neuer Shopkunden konfiguriert und aktiviert werden:</p>
-<p><strong>Sendinblue - API Key</strong><br>
+<p><strong>Brevo - API Key</strong><br>
   Tragen Sie hier Ihren zuvor generierten API Key ein<br>
   <br>
-  <strong>Sendinblue - Attribut für Vorname</strong><br>
+  <strong>Brevo - Attribut für Vorname</strong><br>
   Prüfen Sie ob Ihr Attributname für den Vornamen wirklich VORNAME lautet.<br>
   Falls erforderlich anpassen. Achten Sie auf exakte Schreibweise und Gross- und Kleinschreibung
   <br>
   <br>
-  <strong>Sendinblue - Attribut für Nachname</strong><br>
+  <strong>Brevo - Attribut für Nachname</strong><br>
 Prüfen Sie ob Ihr Attributname für den Nachnamen wirklich NACHNAME lautet.<br>
 Falls erforderlich anpassen. Achten Sie auf exakte Schreibweise und Gross- und Kleinschreibung<br>
 <br>
-<strong>Sendinblue - ID der Liste</strong><br>
+<strong>Brevo - ID der Liste</strong><br>
 Tragen Sie hier die ID Ihrer Liste ein, die Sie sich zuvor notiert hatten.
 <br>
 <br>
-<strong>Sendinblue - ID des Templates</strong><br>
+<strong>Brevo - ID des Templates</strong><br>
 Tragen Sie hier die ID des Templates ein, die Sie sich zuvor notiert hatten.<br>
 <br>
-<strong>Sendinblue - URL zur Bestätigungsseite</strong><br>
+<strong>Brevo - URL zur Bestätigungsseite</strong><br>
 Geben Sie die URL zu der Seite ein, zu der der User geleitet werden   soll, nachdem er den Bestätigungslink im Double-Optin Email angeclickt   hat. Verwenden Sie hier am besten die von diesem Modul mitgelieferte   define page index.php?main_page=newsletter_success und tragen ein:<br>
 https://www.meinshop.de/index.php?main_page=newsletter_success<br>
 Ersetzen Sie www.meinshop.de mit der URL Ihres Shops<br>
 <br>
-<strong>Sendinblue - Debug?</strong><br>
+<strong>Brevo - Debug?</strong><br>
 Stellen Sie das Debugging auf true, damit Sie nun einen Test durchführen können, um zu prüfen, ob Sie alles richtig eingestellt haben.<br>
 Später, wenn alles problemlos läuft, können Sie das Debugging dann wieder auf false stellen
 <br>
 <br>
 Als letztes aktivieren Sie nun die Verbindung für die Datenübertragung bei Neuregistrierungen und stellen<br>
 <br>
-<strong>Sendinblue - Verbindung aktivieren?</strong><br>
+<strong>Brevo - Verbindung aktivieren?</strong><br>
 auf true
 </p>
 <p>Führen Sie nun einen Test durch und machen Sie aus Kundensicht im Frontend eine Neuregistrierung im Shop mit einer Emailadresse, auf die Sie Zugriff haben.<br>
   Kreuzen Sie dabei die Checkbox Newsletter abonnieren an.<br>
-  Im Ordner logs finden Sie danach ein Logfiles namens Sendinblue.log, das die Rückmeldung von Sendinblue protokolliert.
+  Im Ordner logs finden Sie danach ein Logfiles namens Brevo.log, das die Rückmeldung von Brevo protokolliert.
   <br>
   War alles ok, werden Sie einen Statuscode 201 oder 204 sehen mit einem entsprechenden Infotext.<br>
   Ist etwas falsch eingestellt, dann erhalten Sie einen Statuscode 400 mit einem entsprechenden Fehlergrund.<br>
@@ -268,9 +270,12 @@ auf true
   Prüfen Sie nun noch, ob die Emailadresse mit Vorname und Nachname korrekt in Ihrer Sendinblue Administration unter Kunden vorhanden ist.<br>
   <br>
   Wenn alles passt können Sie das Debugging wieder deaktivieren.
-<br>
   <br>
-</p>
+  </p>
+<h2>UPDATE VON VERSION 1.0.0</h2>
+<p>
+  <br>
+  Wenn Sie in Ihrem Shop bereits Version 1.0.0 dieses Moduls verwendet haben, wird es automatisch auf Version 1.1.0 aktualisiert, wenn Sie so vorgehen wie unter Neuinstallation beschrieben und dabei etwaige bestehende Brevo Modul Dateien überschreiben. Dabei werden bei bestehender Konfiguration die Beschreibungstexte von Sendinblue auf Brevo geändert.</p>
 </div>
 </div>
 </div>
@@ -286,9 +291,9 @@ auf true
   Alle von diesem Modul neu angelegten Dateien vom Server löschen.<br>
   Alle von diesem Modul geänderten Dateien wieder mit den Originalversionen bzw. den Dateien Ihres Backups ersetzen.<br>
   <br>
-  1.<br>
+  2.<br>
 Die Datei uninstall.sql im Ordner SQL mit einem Texteditor öffen und den Inhalt kopieren</p>
-<p>2.<br>
+<p>3.<br>
   Zen Cart Administration öffnen und unter Tools &gt; SQL Patches installieren den Inhalt ins Feld hineinkopieren und absenden. </p>
 </div>
 </div>

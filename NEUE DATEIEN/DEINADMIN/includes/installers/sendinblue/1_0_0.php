@@ -1,12 +1,12 @@
 <?php
 /**
 * Package Sendinblue
-* Copyright 2023 webchills (www.webchills.at)
-* Copyright 2003-2023 Zen Cart Development Team
+* Copyright 2023-2024 webchills (www.webchills.at)
+* Copyright 2003-2024 Zen Cart Development Team
 * Zen Cart German Version - www.zen-cart-pro.at
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: 1.0.0.php 2023-01-29 13:47:16Z webchills $
+* @version $Id: 1.0.0.php 2024-04-12 19:43:16Z webchills $
 */
 
 
@@ -51,5 +51,5 @@ LIMIT 1;");
 
 $db->Execute("INSERT IGNORE INTO " . TABLE_ADMIN_PAGES . " (page_key,language_key,main_page,page_params,menu_key,display_on_menu,sort_order) VALUES 
 ('configSendinblue','BOX_CONFIGURATION_SENDINBLUE','FILENAME_CONFIGURATION',CONCAT('gID=',@gid),'configuration','Y',@gid)");
-$messageStack->add('Sendinblue Konfiguration erfolgreich hinzugefügt.', 'success');  
+$messageStack->add('Brevo Konfiguration erfolgreich hinzugefügt.', 'success');  
 }

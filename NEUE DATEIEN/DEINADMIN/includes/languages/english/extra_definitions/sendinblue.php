@@ -1,2 +1,2 @@
 <?php
-define('BOX_CONFIGURATION_SENDINBLUE', 'Sendinblue');
+define('BOX_CONFIGURATION_SENDINBLUE', 'Brevo');

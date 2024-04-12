@@ -3,11 +3,11 @@
  * Zen Cart German Specific
  * information sidebox - displays list of general info links, as defined in this file
  * 
- * @copyright Copyright 2003-2023 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: information.php for Sendinblue 2023-01-30 08:17:16Z webchills $
+ * @version $Id: information.php for Brevo 2024-04-12 19:17:16Z webchills $
  */
 
 $information = [];
@@ -52,11 +52,11 @@ $information = [];
   if (DEFINE_DISCOUNT_COUPON_STATUS <= 1 && defined('MODULE_ORDER_TOTAL_COUPON_STATUS') && MODULE_ORDER_TOTAL_COUPON_STATUS == 'true') {
     $information[] = '<a href="' . zen_href_link(FILENAME_DISCOUNT_COUPON) . '">' . BOX_INFORMATION_DISCOUNT_COUPONS . '</a>';
   }
-// bof sendinblue
+// bof brevo
   if (defined('SENDINBLUE_SIDEBOX_INFORMATION') && SENDINBLUE_SIDEBOX_INFORMATION === 'true') {   
     $information[] = '<a href="' . zen_href_link(FILENAME_NEWSLETTER) . '">' . BOX_INFORMATION_NEWSLETTER . '</a>';
   }
-// eof sendinblue
+// eof brevo
   require($template->get_template_dir('tpl_information.php',DIR_WS_TEMPLATE, $current_page_base,'sideboxes'). '/tpl_information.php');
 
   $title =  BOX_HEADING_INFORMATION;

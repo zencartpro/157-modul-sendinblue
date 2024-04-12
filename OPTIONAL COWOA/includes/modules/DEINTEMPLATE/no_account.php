@@ -6,7 +6,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: no_account.php for Sendinblue 2023-01-30 20:00:16Z webchills $
+ * @version $Id: no_account.php for Brevo 2024-04-12 20:00:16Z webchills $
  */
 // This should be first line of the script:
 $zco_notifier->notify('NOTIFY_MODULE_START_NO_ACCOUNT');
@@ -51,7 +51,7 @@ if (isset($_POST['action']) && ($_POST['action'] == 'process')) {
   $firstname = zen_db_prepare_input(zen_sanitize_string($_POST['firstname']));
   $lastname = zen_db_prepare_input(zen_sanitize_string($_POST['lastname']));
   $nick = (isset($_POST['nick']) ? zen_db_prepare_input($_POST['nick']) : '');
-  if (ACCOUNT_DOB == 'true') $dob = zen_db_prepare_input($_POST['dob']);
+  if (ACCOUNT_DOB == 'true') $dob = (isset($_POST['dob']) ? zen_db_prepare_input($_POST['dob']) : ''); 
  
   
   $street_address = zen_db_prepare_input($_POST['street_address']);
@@ -346,7 +346,7 @@ if (isset($_POST['action']) && ($_POST['action'] == 'process')) {
     // hook notifier class
     $zco_notifier->notify('NOTIFY_LOGIN_SUCCESS_VIA_NO_ACCOUNT');
     
-   // BOF submit data to sendinblue
+   // BOF submit data to brevo
 if (defined('SENDINBLUE_ENABLED') && SENDINBLUE_ENABLED === 'true') {
 if (isset($_POST['newsletter'])) {
     $sendinblue_email = $email_address;
@@ -358,7 +358,7 @@ if (isset($_POST['newsletter'])) {
     add_contact_to_sendinblue($sendinblue_email,$sendinblue_firstname,$sendinblue_lastname,$sendinblue_list_id,$sendinblue_template_id,$sendinblue_redirection_url);       
   }
 }
- //  EOF submit data to sendinblue
+ //  EOF submit data to brevo
 
     if ($_SESSION['cart']->count_contents() > 0)
       zen_redirect(zen_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'));

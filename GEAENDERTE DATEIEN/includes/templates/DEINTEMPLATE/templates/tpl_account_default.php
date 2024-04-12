@@ -10,7 +10,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_account_default.php for Sendinblue 2023-01-29 07:32:58Z webchills $
+ * @version $Id: tpl_account_default.php for Brevo 2024-04-12 19:32:58Z webchills $
  */
 ?>
 

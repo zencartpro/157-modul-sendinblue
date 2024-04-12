@@ -6,7 +6,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_modules_no_account.php for Sendinblue 2023-01-30 20:05:16Z webchills $
+ * @version $Id: tpl_modules_no_account.php for Brevo 2024-04-12 19:05:16Z webchills $
  */
 ?>
 
@@ -149,7 +149,7 @@
 </fieldset>
 <?php } ?>
 
-<input type="hidden" name="email_format" value="TEXT" checked="checked" id="email-format-text" />
+<input type="hidden" name="email_format" value="HTML" checked="checked" id="email-format-html" />
 
 <?php
   if (CUSTOMERS_REFERRAL_STATUS == 2) {
